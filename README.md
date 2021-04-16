@@ -46,11 +46,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- _TODO: My Personal IP
 
 Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-
+- _TODO: JumpBox-Provisioner
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
@@ -63,7 +62,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- _TODO:Ansible is an open-source tool, very basic coding skills are necessary to use Ansible’s playbook. Ansible allows you to model even highly complex IT workflows.You can customize it based on your needs. You don’t need to install any other software or firewall ports on the client systems you want to automate. Another important aspect is you don’t need to install any extra software, there’s more room for application resources on your server.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -99,9 +98,9 @@ Metricbeat records metrics and statistical data from the operating system and se
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+Copy the filebeat-playbook.yml file to /etc/ansible/roles
+Update the /etc/ansible/hosts file to include the IP address of the Elk Server VM and webservers.
+Run the playbook, and go to the Kibana page with http://ELKServerPublicIP:5601/app/kibana# to check that the installation worked.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
